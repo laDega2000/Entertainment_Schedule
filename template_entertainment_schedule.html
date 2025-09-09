@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entertainment Schedule Board</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#0b1220; --muted:#94a3b8; --text:#e5e7eb;
+      --border:#1f2937; --accent:#38bdf8; --chip:#111827;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b1220,#0f172a);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);}
+    .container{max-width:1100px;margin:40px auto;padding:0 16px;}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    h1{font-size:28px;margin:0}
+    .meta{color:var(--muted);font-size:14px}
+    .group{margin:16px 0 24px}
+    .group h2{margin:0 0 10px 0;font-size:18px;color:#c7d2fe}
+    .list{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+    .card{grid-column:span 6;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:14px;box-shadow:0 6px 20px rgba(0,0,0,.25);position:relative}
+    .name{font-size:18px;margin:0 0 6px 0}
+    .when{color:#dbeafe;font-size:14px}
+    .where{color:var(--muted);font-size:13px}
+    .chip{position:absolute;top:10px;right:10px;background:var(--chip);border:1px solid var(--border);padding:4px 8px;border-radius:999px;font-size:12px}
+    .today{outline:2px solid var(--accent);}
+    @media (max-width:900px){.card{grid-column:span 12}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Entertainment Schedule</h1>
+        <div class="meta">Week of ____ • TZ: ____</div>
+      </div>
+      <div class="meta">Events: ____</div>
+    </header>
+
+    <!-- GROUP BY CATEGORY -->
+    <section class="group">
+      <h2>🎬 MOVIE</h2>
+      <div class="list">
+        <!-- LOOP EVENTS IN CATEGORY -->
+        <article class="card">
+          <div class="chip">🎬 MOVIE</div>
+          <h3 class="name">Indie Film Night</h3>
+          <div class="when">2025-09-08T19:00:00</div>
+          <div class="where">Auditorium 1</div>
+          <div class="meta">Organizer: Leila • events0@example.org</div>
+        </article>
+        <!-- /LOOP EVENTS IN CATEGORY -->
+      </div>
+    </section>
+    <!-- /GROUP BY CATEGORY -->
+  </div>
+</body>
+</html>
