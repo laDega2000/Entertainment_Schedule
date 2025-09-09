@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Entertainment Schedule</title>
+    <style>
+        /* Fonts et reset basique */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+        }
+
+        .category-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        /* Cartes événements */
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            list-style: none;
+        }
+
+        li {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .event-name {
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .event-details {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Couleurs par catégorie */
+        {% for cat, color in category_colors.items() %} 
+                 .cat-{{ cat|lower }} 
+                 {border-left: 6px solid {{ color }};s}
+        {% endfor %}
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Entertainment Schedule</h1>
+
+    {% for category, items in events_grouped.items() %}
+        <h2><span class="category-icon">{{ icons[category] }}</span>{{ category }}</h2>
+        <ul>
+        {% for e in items %}
+            <li class="cat-{{ category|lower }}">
+                <div class="event-name">{{ e.name }}</div>
+                <div class="event-details">
+                    {{ e.datetime }}
+                    {% if e.location %}
+                        @ {{ e.location }}
+                    {% else %}
+                        (Location TBA)
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {"name": "Avengers: Endgame", "category": "MOVIE", "datetime": "2025-09-08T20:00:00", "location": "Cinema Hall 1"},
+  {"name": "Inception", "category": "MOVIE", "datetime": "2025-09-09T19:30:00", "location": "Cinema Hall 2"},
+  {"name": "The Batman", "category": "MOVIE", "datetime": "2025-09-12T21:00:00", "location": "Cinema Hall 3"},
+  {"name": "Mario Kart Tournament", "category": "GAME", "datetime": "2025-09-08T18:00:00", "location": "Gaming Arena"},
+  {"name": "League of Legends Finals", "category": "GAME", "datetime": "2025-09-10T17:00:00", "location": "E-Sports Center"},
+  {"name": "FIFA 25 Release Party", "category": "GAME", "datetime": "2025-09-11T20:00:00", "location": "GameStop"},
+  {"name": "Coldplay Live", "category": "MUSIC", "datetime": "2025-09-08T21:00:00", "location": "National Stadium"},
+  {"name": "Drake Concert", "category": "MUSIC", "datetime": "2025-09-13T20:00:00", "location": "Arena Hall"},
+  {"name": "Classical Orchestra", "category": "MUSIC", "datetime": "2025-09-14T18:30:00", "location": "Opera House"},
+  {"name": "TEDx Conference", "category": "OTHER", "datetime": "2025-09-09T09:00:00", "location": "City Hall"},
+  {"name": "Startup Pitch Night", "category": "OTHER", "datetime": "2025-09-10T18:30:00", "location": "Tech Hub"},
+  {"name": "Food Festival", "category": "OTHER", "datetime": "2025-09-15T12:00:00", "location": "Central Park"},
+  {"name": "Spider-Man: No Way Home", "category": "MOVIE", "datetime": "2025-09-14T20:00:00", "location": "Cinema IMAX"},
+  {"name": "Dota 2 Tournament", "category": "GAME", "datetime": "2025-09-15T16:00:00", "location": "E-Sports Arena"},
+  {"name": "Zelda Breath of the Wild Run", "category": "GAME", "datetime": "2025-09-16T14:00:00", "location": "Game Lounge"},
+  {"name": "Rock Festival", "category": "MUSIC", "datetime": "2025-09-17T19:00:00", "location": "Open Air Park"},
+  {"name": "Jazz Night", "category": "MUSIC", "datetime": "2025-09-18T20:30:00", "location": "Blue Note Club"},
+  {"name": "Science Fair", "category": "OTHER", "datetime": "2025-09-12T10:00:00", "location": "University Hall"},
+  {"name": "Book Signing Event", "category": "OTHER", "datetime": "2025-09-13T15:00:00", "location": "Library"},
+  {"name": "Community Charity Run", "category": "OTHER", "datetime": "2025-09-18T08:00:00", "location": "City Center"}
+]

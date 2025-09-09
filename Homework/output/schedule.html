@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Entertainment Schedule</title>
+    <style>
+        /* Fonts et reset basique */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+        }
+
+        .category-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        /* Cartes événements */
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            list-style: none;
+        }
+
+        li {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .event-name {
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .event-details {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Couleurs par catégorie */
+         
+                 .cat-movie 
+                 {border-left: 6px solid #f39c12;s}
+         
+                 .cat-game 
+                 {border-left: 6px solid #27ae60;s}
+         
+                 .cat-music 
+                 {border-left: 6px solid #9235ba;s}
+         
+                 .cat-other 
+                 {border-left: 6px solid #3498db;s}
+        
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Entertainment Schedule</h1>
+
+    
+        <h2><span class="category-icon">🎬</span>MOVIE</h2>
+        <ul>
+        
+            <li class="cat-movie">
+                <div class="event-name">Avengers: Endgame</div>
+                <div class="event-details">
+                    2025-09-08T20:00:00
+                    
+                        @ Cinema Hall 1
+                    
+                </div>
+            </li>
+        
+            <li class="cat-movie">
+                <div class="event-name">Inception</div>
+                <div class="event-details">
+                    2025-09-09T19:30:00
+                    
+                        @ Cinema Hall 2
+                    
+                </div>
+            </li>
+        
+            <li class="cat-movie">
+                <div class="event-name">The Batman</div>
+                <div class="event-details">
+                    2025-09-12T21:00:00
+                    
+                        @ Cinema Hall 3
+                    
+                </div>
+            </li>
+        
+            <li class="cat-movie">
+                <div class="event-name">Spider-Man: No Way Home</div>
+                <div class="event-details">
+                    2025-09-14T20:00:00
+                    
+                        @ Cinema IMAX
+                    
+                </div>
+            </li>
+        
+        </ul>
+    
+        <h2><span class="category-icon">🎮</span>GAME</h2>
+        <ul>
+        
+            <li class="cat-game">
+                <div class="event-name">Mario Kart Tournament</div>
+                <div class="event-details">
+                    2025-09-08T18:00:00
+                    
+                        @ Gaming Arena
+                    
+                </div>
+            </li>
+        
+            <li class="cat-game">
+                <div class="event-name">League of Legends Finals</div>
+                <div class="event-details">
+                    2025-09-10T17:00:00
+                    
+                        @ E-Sports Center
+                    
+                </div>
+            </li>
+        
+            <li class="cat-game">
+                <div class="event-name">FIFA 25 Release Party</div>
+                <div class="event-details">
+                    2025-09-11T20:00:00
+                    
+                        @ GameStop
+                    
+                </div>
+            </li>
+        
+            <li class="cat-game">
+                <div class="event-name">Dota 2 Tournament</div>
+                <div class="event-details">
+                    2025-09-15T16:00:00
+                    
+                        @ E-Sports Arena
+                    
+                </div>
+            </li>
+        
+            <li class="cat-game">
+                <div class="event-name">Zelda Breath of the Wild Run</div>
+                <div class="event-details">
+                    2025-09-16T14:00:00
+                    
+                        @ Game Lounge
+                    
+                </div>
+            </li>
+        
+        </ul>
+    
+        <h2><span class="category-icon">🎵</span>MUSIC</h2>
+        <ul>
+        
+            <li class="cat-music">
+                <div class="event-name">Coldplay Live</div>
+                <div class="event-details">
+                    2025-09-08T21:00:00
+                    
+                        @ National Stadium
+                    
+                </div>
+            </li>
+        
+            <li class="cat-music">
+                <div class="event-name">Drake Concert</div>
+                <div class="event-details">
+                    2025-09-13T20:00:00
+                    
+                        @ Arena Hall
+                    
+                </div>
+            </li>
+        
+            <li class="cat-music">
+                <div class="event-name">Classical Orchestra</div>
+                <div class="event-details">
+                    2025-09-14T18:30:00
+                    
+                        @ Opera House
+                    
+                </div>
+            </li>
+        
+            <li class="cat-music">
+                <div class="event-name">Rock Festival</div>
+                <div class="event-details">
+                    2025-09-17T19:00:00
+                    
+                        @ Open Air Park
+                    
+                </div>
+            </li>
+        
+            <li class="cat-music">
+                <div class="event-name">Jazz Night</div>
+                <div class="event-details">
+                    2025-09-18T20:30:00
+                    
+                        @ Blue Note Club
+                    
+                </div>
+            </li>
+        
+        </ul>
+    
+        <h2><span class="category-icon">📌</span>OTHER</h2>
+        <ul>
+        
+            <li class="cat-other">
+                <div class="event-name">TEDx Conference</div>
+                <div class="event-details">
+                    2025-09-09T09:00:00
+                    
+                        @ City Hall
+                    
+                </div>
+            </li>
+        
+            <li class="cat-other">
+                <div class="event-name">Startup Pitch Night</div>
+                <div class="event-details">
+                    2025-09-10T18:30:00
+                    
+                        @ Tech Hub
+                    
+                </div>
+            </li>
+        
+            <li class="cat-other">
+                <div class="event-name">Food Festival</div>
+                <div class="event-details">
+                    2025-09-15T12:00:00
+                    
+                        @ Central Park
+                    
+                </div>
+            </li>
+        
+            <li class="cat-other">
+                <div class="event-name">Science Fair</div>
+                <div class="event-details">
+                    2025-09-12T10:00:00
+                    
+                        @ University Hall
+                    
+                </div>
+            </li>
+        
+            <li class="cat-other">
+                <div class="event-name">Book Signing Event</div>
+                <div class="event-details">
+                    2025-09-13T15:00:00
+                    
+                        @ Library
+                    
+                </div>
+            </li>
+        
+            <li class="cat-other">
+                <div class="event-name">Community Charity Run</div>
+                <div class="event-details">
+                    2025-09-18T08:00:00
+                    
+                        @ City Center
+                    
+                </div>
+            </li>
+        
+        </ul>
+    
+</body>
+</html>
